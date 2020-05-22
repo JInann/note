@@ -2,7 +2,7 @@ egg爬虫
 
 [git地址](https://github.com/JInann/egg-demo)
 
-发起请求
+发起请求 
 
 ```javascript
 const { data } = await this.ctx.curl('http://www.xbiquge.la/53/53881/22735533.html', {
