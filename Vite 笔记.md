@@ -1,12 +1,12 @@
 #### Vite + vue2 与 webpack/vue-cli + vue2的比较
 
-目录不同
+##### 目录不同
 
 ​	vite 根目录即为代码目录
 
 ​	webpack 一般上代码都在src中，根目录多为配置文件、项目文件
 
-import/require 不同
+##### import/require 不同
 
 ​	vite 多了import.meta.glob/ import.meta.globEager 方法
 
@@ -18,7 +18,7 @@ import/require 不同
 
 ​	导入vue文件时，须带后缀`.vue`
 
-入口文件不同
+##### 入口文件不同
 
 ​	入口文件为html，且须在html中以module形式引入入口js
 
@@ -26,7 +26,7 @@ import/require 不同
 <script type="module" src="./main.js"></script>	
 ```
 
-多页面配置
+##### 多页面配置
 
 ```javascript
 import { defineConfig } from 'vite'
@@ -47,9 +47,33 @@ export default defineConfig({
 })
 ```
 
-​	
+​	***入口文件是什么路径 打包后的html就是什么路径***	
 
-热更新
+​	如，上面的check-in 打包后在dist/pages/check-in/index.html。但是打包后的资源统一在dist/assets下。所以	如果设置base为 ‘./’ 相对路径，不适用与html文件不在根目录的情况。如要配置多页面，部署到网站根目录时无	须处理，部署子目录时bash须为具体路径。
 
-资源（图片）缺失，后添加 须在浏览器手动刷新
+##### 打包模式及环境变量
+
+使用 `--mode xxx`切换环境
+
+自动加载根目录下的 .env .env.xxx文件
+
+```
+NODE_ENV=production
+VITE_APP_TITLE=production
+```
+
+在项目代码中使用import.meta.env访问 `VITE_`开头的环境变量
+
+在vite.config.js中
+
+```javascript
+import { defineConfig, loadEnv } from 'vite'
+export default ({mode})=>{
+	let env = loadEnv(mode,'.')
+	return defineConfig({
+		// ...config
+	})
+}
+
+```
 
