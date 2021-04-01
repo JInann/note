@@ -49,15 +49,15 @@ Serverless 对前端和后端带来的影响总体都是正向的。对于前端
 - 具备Serverless特性的云服务
 
 
-![image-20210401105555754](/Users/jxh/Library/Application Support/typora-user-images/image-20210401105555754.png)
+![image-20210401105555754](./ServerlessImage/image-20210401105555754.png)
 
 ### 传统流程
 
-![image-20210401112956189](/Users/jxh/Library/Application Support/typora-user-images/image-20210401112956189.png)
+![image-20210401112956189](./ServerlessImage/image-20210401112956189.png)
 
 ### Serverless
 
-![image-20210401113021385](/Users/jxh/Library/Application Support/typora-user-images/image-20210401113021385.png)
+![image-20210401113021385](./ServerlessImage/image-20210401113021385.png)
 
 
 
@@ -71,7 +71,7 @@ Serverless 对前端和后端带来的影响总体都是正向的。对于前端
 
 ### 冷启动流程图
 
-![image-20210401113219460](/Users/jxh/Library/Application Support/typora-user-images/image-20210401113219460.png)
+![image-20210401113219460](./ServerlessImage/image-20210401113219460.png)
 
 ### 两种进程模型
 
@@ -82,7 +82,7 @@ Serverless 对前端和后端带来的影响总体都是正向的。对于前端
 
 ### 扩缩容
 
-![image-20210401114415893](/Users/jxh/Library/Application Support/typora-user-images/image-20210401114415893.png)
+![image-20210401114415893](./ServerlessImage/image-20210401114415893.png)
 
 ### Stateful VS Stateless
 
@@ -93,7 +93,7 @@ Serverless 对前端和后端带来的影响总体都是正向的。对于前端
 
 ### 后端应用BaaS化
 
-![image-20210401114947667](/Users/jxh/Library/Application Support/typora-user-images/image-20210401114947667.png)
+![image-20210401114947667](./ServerlessImage/image-20210401114947667.png)
 
 ### 微服务的概念
 
@@ -115,7 +115,7 @@ API、服务调用、服务发现；日志、链路追踪；容灾性、监控�
 
 ### 业务逻辑的拆与合
 
-![image-20210401115749693](/Users/jxh/Library/Application Support/typora-user-images/image-20210401115749693.png)
+![image-20210401115749693](./ServerlessImage/image-20210401115749693.png)
 
 #### 拆之，领域驱动设计
 
@@ -141,7 +141,7 @@ API、服务调用、服务发现；日志、链路追踪；容灾性、监控�
 2. 模拟流量回归测试通过，发布到灰度环境；
 3. 代码正式上线，灰度环境替换正式环境。流水线的每个节点产生的结果，都会作为下一个节点必要的启始参数。
 
-![image-20210401135850160](/Users/jxh/Library/Application Support/typora-user-images/image-20210401135850160.png)
+![image-20210401135850160](./ServerlessImage/image-20210401135850160.png)
 
 ### 函数初始化入口
 
@@ -168,7 +168,7 @@ ENTRYPOINT [ "node","index.js" ]
 
 ### K8s
 
-![image-20210401172452979](/Users/jxh/Library/Application Support/typora-user-images/image-20210401172452979.png)
+![image-20210401172452979](./ServerlessImage/image-20210401172452979.png)
 
 #### Master 节点
 
